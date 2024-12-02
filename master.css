@@ -1,0 +1,73 @@
+:root{
+    --bs-primary :rgb(231, 49, 49);
+    --bs-secondery :rgb(57, 57, 132);
+    --bs-asl :rgba(198, 199, 104, 0.479);
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body html {
+    height: 100%;
+}  
+
+body{
+    background-image: url(../../public/imges/landing/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.containor{
+    border: 3px solid var(--bs-secondery);
+    border-radius: 5px;
+    padding: 60px;
+    position: relative;
+    background-color: rgba(52, 23, 23, 0.64);
+} 
+ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+}
+ul li{
+    color: var(--bs-secondery);
+    list-style: none;
+    position: relative;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    position: relative;
+}
+
+ul li a::before{
+    content: attr(data-text);
+    width: 0%;
+    color:var(--bs-asl) ;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: rgba(52, 23, 23, 0.384); */
+    position: absolute;
+    border-right: 8px solid var(--bs-primary);
+    transition: 0.6s ease-in;
+}
+
+ul li a:hover::before{
+width: 100%;
+filter: drop-shadow(0 0 30px var(--bs-primary));
+}
